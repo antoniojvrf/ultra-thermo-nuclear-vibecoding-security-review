@@ -1,162 +1,180 @@
 # 🛡️ VibeCoding Security Skill
 
-> A comprehensive security skill for AI coding assistants — combining preventive guidance and post-hoc auditing for "vibe-coded" projects.
+> Uma skill de segurança abrangente para assistentes de IA — combinando orientação preventiva e auditoria automatizada para projetos "vibe-coded".
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0-blue)](SKILL.md)
-[![Checks](https://img.shields.io/badge/security%20checks-50-green)](#checklist-coverage)
+[![Version](https://img.shields.io/badge/versão-1.0-blue)](SKILL.md)
+[![Checks](https://img.shields.io/badge/checks%20de%20segurança-50-green)](#cobertura-do-checklist)
 
-## What Is This?
+---
 
-AI coding assistants (Copilot, Cursor, Claude, Codex) are incredibly productive — but they consistently introduce the same security vulnerabilities. This skill teaches your AI agent to **think like a security engineer**, both while writing code and when reviewing it.
+## O Que É Isso?
 
-This skill was synthesized from the best ideas across three public vibe-security skills ([LadyKerr](https://github.com/LadyKerr/Vibe-Security-Skill), [BehiSecc](https://github.com/BehiSecc/VibeSec-Skill), [raroque](https://github.com/raroque/vibe-security-skill)) and extended with new coverage areas.
+Assistentes de IA (Copilot, Cursor, Claude, Codex) são incrivelmente produtivos — mas introduzem consistentemente as mesmas vulnerabilidades de segurança. Esta skill ensina seu agente de IA a **pensar como um engenheiro de segurança**, tanto enquanto escreve código quanto ao revisá-lo.
 
-## Two Operating Modes
+Esta skill foi sintetizada a partir das melhores ideias de três skills públicas de vibe-security ([LadyKerr](https://github.com/LadyKerr/Vibe-Security-Skill), [BehiSecc](https://github.com/BehiSecc/VibeSec-Skill), [raroque](https://github.com/raroque/vibe-security-skill)) e ampliada com novas áreas de cobertura.
 
-| Mode | When | What It Does |
-|------|------|-------------|
-| 🛡️ **PREVENTIVE** | While writing code | Consults vulnerability knowledge base before generating code that touches auth, payments, DB, secrets |
-| 🔍 **AUDIT** | On existing code | Runs a 50-point checklist, scores the project 0-100, produces a structured report with before/after diffs |
+---
 
-## Checklist Coverage
+## Dois Modos de Operação
 
-**50 security checks** across three severity tiers:
+| Modo | Quando | O Que Faz |
+|------|--------|-----------|
+| 🛡️ **PREVENTIVO** | Enquanto escreve código | Consulta a base de vulnerabilidades antes de gerar código que toque em auth, pagamentos, banco, secrets |
+| 🔍 **AUDITORIA** | Em código existente | Executa checklist de 50 pontos, pontua o projeto de 0-100, gera relatório estruturado com diffs before/after |
 
-### 🚨 Critical (15) — Fix Before Deploy
-Exposed secrets, auth bypass, SQL injection, XSS, IDOR, CORS wildcard, missing RLS, client-side prices, JWT alg:none, file upload bypass, SSRF, service_role key exposure, root containers, exposed .git
+---
 
-### 🔍 Standard (25) — Fix Within 1 Week  
-CSRF, rate limiting, mass assignment, open redirect, path traversal, XXE, input validation, password hashing, session management, GraphQL introspection, prompt injection, AI usage caps, webhook verification, secure storage, deep links, OAuth/PKCE, WebSocket auth, race conditions, prototype pollution, dependency CVEs, error leaking, CSP, Server Actions validation, cookie prefixes
+## Cobertura do Checklist
 
-### 🚀 Production (10) — Before Go-Live
-Security headers, source maps, debug endpoints, GDPR deletion, backup strategy, logging PII, env separation, CI/CD hardening, email security (SPF/DKIM/DMARC), attack surface docs
+**50 verificações de segurança** em três níveis de severidade:
 
-## Coverage Map
+### 🚨 Crítico (15) — Corrigir Antes de Implantar
+Secrets expostos, bypass de autenticação, SQL injection, XSS, IDOR, CORS wildcard, RLS ausente, preços client-side, JWT alg:none, upload sem validação, SSRF, chave service_role exposta, containers como root, diretório .git acessível
 
-| Domain | Coverage |
-|--------|---------|
-| 🔐 Authentication (JWT, OAuth, PKCE, Sessions) | ✅ Deep |
-| 💉 Injection (SQL, XSS, Command, XXE, Prototype Pollution) | ✅ Deep |
-| 🔑 Secrets Management | ✅ Deep |
-| 🗄️ Supabase RLS | ✅ Deep |
-| 🔥 Firebase Security Rules | ✅ Deep |
-| ▲ Next.js (Server Actions, Middleware, App Router) | ✅ Deep |
-| 💳 Stripe Payments | ✅ Deep |
-| 📱 React Native / Expo | ✅ Deep |
-| 🤖 AI / LLM Integration | ✅ Deep |
-| 🌐 GraphQL | ✅ Deep |
-| 🐳 Docker / CI-CD | ✅ Deep |
-| 🔒 Cryptography | ✅ Deep |
-| ⚡ Race Conditions | ✅ Deep |
-| 🏗️ CORS, CSP, Security Headers | ✅ Deep |
-| 📋 GDPR Compliance | ✅ Deep |
-| 📊 Logging / Observability | ✅ Deep |
-| 📦 Supply Chain / Dependencies | ✅ Deep |
-| 🔗 CSRF, SSRF, Open Redirect | ✅ Deep (with bypass tables) |
-| 📂 File Upload Security | ✅ Deep (magic bytes table) |
-| 🌍 Access Control (IDOR, Privilege Escalation) | ✅ Deep |
+### 🔍 Padrão (25) — Corrigir em 1 Semana
+CSRF, rate limiting, mass assignment, open redirect, path traversal, XXE, validação de input, hashing de senhas, gerenciamento de sessão, introspection GraphQL, prompt injection, caps de uso de IA, verificação de webhooks, armazenamento seguro mobile, deep links, OAuth/PKCE, auth por mensagem em WebSocket, race conditions, prototype pollution, CVEs em dependências, vazamento de erros, CSP, validação de Server Actions, prefixos de cookies
 
-## File Structure
+### 🚀 Produção (10) — Antes de Ir ao Ar
+Headers de segurança, source maps, endpoints debug, exclusão de conta (GDPR/LGPD), estratégia de backup, PII em logs, separação de ambientes, hardening de CI/CD, segurança de email (SPF/DKIM/DMARC), documentação da superfície de ataque
+
+---
+
+## Mapa de Cobertura
+
+| Domínio | Cobertura |
+|---------|-----------|
+| 🔐 Autenticação (JWT, OAuth, PKCE, Sessões) | ✅ Profunda |
+| 💉 Injeção (SQL, XSS, Command, XXE, Prototype Pollution) | ✅ Profunda |
+| 🔑 Gestão de Secrets | ✅ Profunda |
+| 🗄️ Supabase RLS | ✅ Profunda |
+| 🔥 Firebase Security Rules | ✅ Profunda |
+| ▲ Next.js (Server Actions, Middleware, App Router) | ✅ Profunda |
+| 💳 Pagamentos Stripe | ✅ Profunda |
+| 📱 React Native / Expo | ✅ Profunda |
+| 🤖 Integração IA / LLM | ✅ Profunda |
+| 🌐 GraphQL | ✅ Profunda |
+| 🐳 Docker / CI-CD | ✅ Profunda |
+| 🔒 Criptografia | ✅ Profunda |
+| ⚡ Race Conditions | ✅ Profunda |
+| 🏗️ CORS, CSP, Headers de Segurança | ✅ Profunda |
+| 📋 Conformidade LGPD/GDPR | ✅ Profunda |
+| 📊 Logging / Observabilidade | ✅ Profunda |
+| 📦 Supply Chain / Dependências | ✅ Profunda |
+| 🔗 CSRF, SSRF, Open Redirect | ✅ Profunda (com tabelas de bypass) |
+| 📂 Segurança de Upload | ✅ Profunda (tabela de magic bytes) |
+| 🌍 Controle de Acesso (IDOR, Escalação de Privilégio) | ✅ Profunda |
+
+---
+
+## Estrutura de Arquivos
 
 ```
 vibecoding-security/
-├── SKILL.md                         # Main manifest — stack detection + routing
+├── SKILL.md                         # Manifesto principal — detecção de stack + roteamento
 ├── core/
-│   ├── principles.md                # 7 security pillars + vibe-coding anti-patterns
-│   ├── audit-process.md             # 50-point checklist routing table
-│   └── output-format.md             # Report template with scoring
+│   ├── principles.md                # 7 pilares de segurança + anti-patterns de vibe coding
+│   ├── audit-process.md             # Tabela de roteamento do checklist de 50 pontos
+│   └── output-format.md             # Template de relatório com pontuação
 ├── vulnerabilities/
 │   ├── injection.md                 # SQLi, XSS, Command Injection, XXE, Prototype Pollution
-│   ├── access-control.md            # IDOR, Privilege Escalation, Mass Assignment
-│   ├── authentication.md            # JWT, OAuth/PKCE, Passwords, Sessions, WebSocket
+│   ├── access-control.md            # IDOR, Escalação de Privilégio, Mass Assignment
+│   ├── authentication.md            # JWT, OAuth/PKCE, Senhas, Sessões, WebSocket
 │   ├── csrf-ssrf.md                 # CSRF, SSRF (12 bypasses), Open Redirect (11 bypasses)
 │   ├── file-upload.md               # Magic bytes, Polyglot, ZIP Slip, Path Traversal
-│   ├── cryptography.md              # AES-GCM, Hashing, Key Management, Nonce reuse
-│   └── race-conditions.md           # TOCTOU, Double-spend, Idempotency, Distributed Locks
+│   ├── cryptography.md              # AES-GCM, Hashing, Gestão de Chaves, Reutilização de Nonce
+│   └── race-conditions.md           # TOCTOU, Double-spend, Idempotência, Locks Distribuídos
 ├── stack/
-│   ├── supabase.md                  # RLS policies, service_role key, getUser vs getSession
-│   ├── firebase.md                  # Firestore rules, Storage rules, ID token verification
-│   ├── nextjs.md                    # Server Actions, Route Handlers, Middleware, env vars
-│   ├── stripe-payments.md           # Price manipulation, Webhook sig verification
-│   ├── react-native.md              # SecureStore, API proxy, Deep links, Expo env vars
-│   ├── ai-llm.md                    # API key protection, Prompt injection, Usage caps
-│   ├── graphql.md                   # Introspection, Depth limiting, Complexity, Batching
-│   └── docker-cicd.md               # Non-root containers, Pipeline permissions, Action pinning
+│   ├── supabase.md                  # Políticas RLS, chave service_role, getUser vs getSession
+│   ├── firebase.md                  # Regras Firestore, regras de Storage, verificação de ID token
+│   ├── nextjs.md                    # Server Actions, Route Handlers, Middleware, variáveis de ambiente
+│   ├── stripe-payments.md           # Manipulação de preço, verificação de assinatura de webhook
+│   ├── react-native.md              # SecureStore, proxy de API, Deep links, env vars do Expo
+│   ├── ai-llm.md                    # Proteção de chave de API, Prompt injection, Caps de uso
+│   ├── graphql.md                   # Introspection, Limitação de profundidade, Complexidade, Batching
+│   └── docker-cicd.md               # Containers não-root, permissões de pipeline, pinning de Actions
 ├── production/
-│   ├── security-headers.md          # CSP with nonces, CORS, HSTS, complete header set
-│   ├── deployment.md                # Source maps, Debug endpoints, .git, SPF/DKIM/DMARC
-│   ├── compliance.md                # GDPR account deletion, Data export, Backup strategy
-│   ├── observability.md             # PII sanitization, Log injection, Structured logging
-│   └── dependency-audit.md          # Typosquatting, Supply chain, Lockfile, License
+│   ├── security-headers.md          # CSP com nonces, CORS, HSTS, conjunto completo de headers
+│   ├── deployment.md                # Source maps, endpoints debug, .git, SPF/DKIM/DMARC
+│   ├── compliance.md                # Exclusão de conta LGPD/GDPR, exportação de dados, backup
+│   ├── observability.md             # Sanitização de PII, log injection, logging estruturado
+│   └── dependency-audit.md          # Typosquatting, supply chain, lockfile, licenças
 └── checklists/
-    ├── critical-15.md               # 15 critical checks with regex search patterns
-    ├── standard-25.md               # 25 standard checks with cross-references
-    └── production-10.md             # 10 pre-deploy checks
+    ├── critical-15.md               # 15 checks críticos com padrões regex
+    ├── standard-25.md               # 25 checks padrão com referências cruzadas
+    └── production-10.md             # 10 checks pré-deploy
 ```
 
-## Installation
+---
+
+## Instalação
 
 ### Antigravity (Gemini AI)
-The skill is read automatically from `~/.gemini/antigravity/skills/vibecoding-security/`.
+A skill é lida automaticamente de `~/.gemini/antigravity/skills/vibecoding-security/`.
 
 ```bash
-# Clone into your Antigravity skills directory
+# Clone para o diretório de skills do Antigravity
 git clone https://github.com/antoniojvrf/vibecoding-security \
   ~/.gemini/antigravity/skills/vibecoding-security
 ```
 
-### Other Agents (Claude, Cursor, Copilot)
-Copy the contents of `SKILL.md` into your agent's system prompt or rules file (`.cursorrules`, `CLAUDE.md`, `.github/copilot-instructions.md`). For the full modular experience, include the referenced files in your agent's context.
+### Outros Agentes (Claude, Cursor, Copilot)
+Copie o conteúdo do `SKILL.md` para o prompt de sistema ou arquivo de regras do seu agente (`.cursorrules`, `CLAUDE.md`, `.github/copilot-instructions.md`). Para a experiência modular completa, inclua os arquivos referenciados no contexto do agente.
 
-## Usage
+---
 
-The skill activates automatically when context matches security-related code. You can also trigger it explicitly:
+## Como Usar
+
+A skill ativa automaticamente quando o contexto envolve código relacionado à segurança. Você também pode ativá-la explicitamente:
 
 ```
-"Run a vibe security audit on this project"
-"Is this code safe to deploy?"
-"Check my Supabase setup for vulnerabilities"
-"Review this payment flow for security issues"
-"Can someone hack this?"
+"Faça uma auditoria de segurança neste projeto"
+"Esse código é seguro para deploy?"
+"Verifique meu setup do Supabase para vulnerabilidades"
+"Revise este fluxo de pagamento quanto à segurança"
+"Alguém pode hackear isso?"
 ```
 
-## Example Output
+---
+
+## Exemplo de Output
 
 ```markdown
 # 🛡️ VibeSec Security Report
 
-**Score**: 64/100 — 🟡 Fair — needs attention
-**Issues Found**: 5 (2 Critical, 2 High, 1 Medium)
+**Score**: 64/100 — 🟡 Regular — precisa de atenção
+**Problemas Encontrados**: 5 (2 Críticos, 2 Altos, 1 Médio)
 
-## ⚡ Quick Wins (fixable in < 10 minutes)
-| # | Issue             | Severity | Fix Time | One-liner                          |
-|---|-------------------|----------|----------|------------------------------------|
-| 1 | .env not ignored  | 10/10    | 1 min    | echo ".env*" >> .gitignore         |
+## ⚡ Quick Wins (corrigíveis em < 10 minutos)
+| # | Problema          | Severidade | Tempo | Correção                           |
+|---|-------------------|------------|-------|------------------------------------|
+| 1 | .env não ignorado | 10/10      | 1 min | echo ".env*" >> .gitignore         |
 
-## 🚨 Critical Issues
+## 🚨 Problemas Críticos
 
-### C1. `lib/supabase.ts:3` — Service role key in client bundle
-**Impact**: Anyone can read, modify, or delete every row in your database.
+### C1. `lib/supabase.ts:3` — Chave service_role exposta no bundle do cliente
+**Impacto**: Qualquer pessoa pode ler, modificar ou deletar todos os dados do banco.
 
 \`\`\`diff
 - const supabase = createClient(url, process.env.NEXT_PUBLIC_SUPABASE_SERVICE_KEY!)
 + const supabase = createClient(url, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
 \`\`\`
-> ⚠️ Rotate the key immediately in Supabase Dashboard → Settings → API.
+> ⚠️ Rotacione a chave imediatamente em Supabase Dashboard → Settings → API.
 ```
 
-## Contributing
+---
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding new vulnerability patterns, stack modules, or improving existing checks.
+## Contribuindo
 
-## Credits
+Veja [CONTRIBUTING.md](CONTRIBUTING.md) para diretrizes sobre como adicionar novos padrões de vulnerabilidade, módulos de stack ou melhorar checks existentes.
 
-Built on the shoulders of:
-- [LadyKerr/Vibe-Security-Skill](https://github.com/LadyKerr/Vibe-Security-Skill) — structured audit format and scoring
-- [BehiSecc/VibeSec-Skill](https://github.com/BehiSecc/VibeSec-Skill) — offensive depth and bypass technique tables
-- [raroque/vibe-security-skill](https://github.com/raroque/vibe-security-skill) — modular architecture and stack-specific modules
+## Créditos
 
-## License
+Construído sobre os ombros de:
+- [LadyKerr/Vibe-Security-Skill](https://github.com/LadyKerr/Vibe-Security-Skill) — formato de auditoria estruturada e pontuação
+- [BehiSecc/VibeSec-Skill](https://github.com/BehiSecc/VibeSec-Skill) — profundidade ofensiva e tabelas de técnicas de bypass
+- [raroque/vibe-security-skill](https://github.com/raroque/vibe-security-skill) — arquitetura modular e módulos específicos por stack
 
-[MIT](LICENSE) — Use freely, contribute back.
+## Licença
+
+[MIT](LICENSE) — Use livremente, contribua de volta.

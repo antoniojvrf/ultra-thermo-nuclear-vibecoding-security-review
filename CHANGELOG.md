@@ -1,40 +1,40 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ## [1.0.0] - 2026-04-12
 
-### Added
-- **SKILL.md** — Main skill manifest with dual-mode operation (PREVENTIVE + AUDIT), automatic tech stack detection, and reference index
-- **core/principles.md** — 7 security pillars and catalog of AI-introduced anti-patterns
-- **core/audit-process.md** — 50-point checklist routing table across three severity tiers
-- **core/output-format.md** — Standardized report template with score 0-100, before/after diffs, Quick Wins section
-- **vulnerabilities/injection.md** — SQL injection, XSS (with indirect sources), Command injection, XXE (multi-language), Prototype pollution
-- **vulnerabilities/access-control.md** — IDOR, Privilege escalation, Mass assignment
-- **vulnerabilities/authentication.md** — JWT (alg:none, algorithm confusion), OAuth 2.0 / PKCE, Password hashing, Session management, Cookie prefixes, WebSocket authentication
-- **vulnerabilities/csrf-ssrf.md** — CSRF, SSRF with 12 IP bypass techniques and DNS rebinding, Open redirect with 11 bypass techniques
-- **vulnerabilities/file-upload.md** — Magic bytes reference table, polyglot files, ZIP slip, path traversal, secure upload handler
-- **vulnerabilities/cryptography.md** — AES-GCM encryption, hashing algorithms, key management, nonce reuse, timing-safe comparison
-- **vulnerabilities/race-conditions.md** — TOCTOU, double-spend, idempotency keys, distributed locks (Redis)
-- **stack/supabase.md** — RLS policy patterns (dangerous vs secure), service_role key exposure, getUser vs getSession
-- **stack/firebase.md** — Firestore security rules, Storage rules, ID token server-side verification
-- **stack/nextjs.md** — Server Actions (Zod validation + auth), Route Handlers, Middleware, env var scoping, security headers config
-- **stack/stripe-payments.md** — Client-side price manipulation, webhook signature verification, subscription status validation
-- **stack/react-native.md** — SecureStore vs AsyncStorage, API key proxying, Expo env vars, deep link validation
-- **stack/ai-llm.md** — API key server-side protection, rate limiting + usage caps, prompt injection prevention, output sanitization
-- **stack/graphql.md** — Introspection, depth limiting, complexity analysis, batching prevention, resolver authorization
-- **stack/docker-cicd.md** — Non-root containers, secrets in Dockerfile, image pinning, GitHub Actions permissions, action SHA pinning
-- **production/security-headers.md** — Complete header set, CSP with nonces (Next.js example), CORS allowlist configuration
-- **production/deployment.md** — Source maps, debug endpoints, env separation, .git exposure, email security (SPF/DKIM/DMARC)
-- **production/compliance.md** — GDPR complete account deletion flow, data export, consent management, backup strategy
-- **production/observability.md** — PII sanitization in logs, log injection prevention, structured logging with redaction, security event monitoring
-- **production/dependency-audit.md** — Typosquatting detection, CVE scanning, supply chain attacks, lockfile integrity, license compliance
-- **checklists/critical-15.md** — 15 critical checks with regex search patterns and pass criteria
-- **checklists/standard-25.md** — 25 standard checks with cross-references to module files
-- **checklists/production-10.md** — 10 production readiness checks
+### Adicionado
+- **SKILL.md** — Manifesto principal com operação dual-mode (PREVENTIVO + AUDITORIA), detecção automática de stack e índice de referências
+- **core/principles.md** — 7 pilares de segurança e catálogo de anti-patterns introduzidos por IA
+- **core/audit-process.md** — Tabela de roteamento do checklist de 50 pontos em três níveis de severidade
+- **core/output-format.md** — Template de relatório padronizado com score 0-100, diffs before/after, seção Quick Wins
+- **vulnerabilities/injection.md** — SQL injection, XSS (com fontes indiretas), Command injection, XXE (multi-linguagem), Prototype pollution
+- **vulnerabilities/access-control.md** — IDOR, Escalação de privilégio, Mass assignment
+- **vulnerabilities/authentication.md** — JWT (alg:none, confusão de algoritmo), OAuth 2.0 / PKCE, Hashing de senhas, Gerenciamento de sessão, Prefixos de cookies, Autenticação WebSocket
+- **vulnerabilities/csrf-ssrf.md** — CSRF, SSRF com 12 técnicas de bypass de IP e DNS rebinding, Open redirect com 11 técnicas de bypass
+- **vulnerabilities/file-upload.md** — Tabela de referência de magic bytes, arquivos polyglot, ZIP slip, path traversal, handler de upload seguro
+- **vulnerabilities/cryptography.md** — Criptografia AES-GCM, algoritmos de hashing, gestão de chaves, reutilização de nonce, comparação timing-safe
+- **vulnerabilities/race-conditions.md** — TOCTOU, double-spend, chaves de idempotência, locks distribuídos (Redis)
+- **stack/supabase.md** — Padrões de políticas RLS (perigosos vs seguros), exposição de chave service_role, getUser vs getSession
+- **stack/firebase.md** — Regras de segurança Firestore, regras de Storage, verificação de ID token server-side
+- **stack/nextjs.md** — Server Actions (validação Zod + auth), Route Handlers, Middleware, escopo de variáveis de ambiente, configuração de headers
+- **stack/stripe-payments.md** — Manipulação de preço client-side, verificação de assinatura de webhook, validação de status de assinatura
+- **stack/react-native.md** — SecureStore vs AsyncStorage, proxy de chave de API, variáveis de ambiente Expo, validação de deep link
+- **stack/ai-llm.md** — Proteção de chave de API server-side, rate limiting + caps de uso, prevenção de prompt injection, sanitização de output
+- **stack/graphql.md** — Introspection, limitação de profundidade, análise de complexidade, prevenção de batching, autorização em resolvers
+- **stack/docker-cicd.md** — Containers não-root, secrets em Dockerfile, pinning de imagens, permissões de GitHub Actions, pinning de Actions por SHA
+- **production/security-headers.md** — Conjunto completo de headers, CSP com nonces (exemplo Next.js), configuração de allowlist CORS
+- **production/deployment.md** — Source maps, endpoints debug, separação de ambientes, exposição de .git, segurança de email (SPF/DKIM/DMARC)
+- **production/compliance.md** — Fluxo completo de exclusão de conta LGPD/GDPR, exportação de dados, gestão de consentimento, estratégia de backup
+- **production/observability.md** — Sanitização de PII em logs, prevenção de log injection, logging estruturado com redação, monitoramento de eventos de segurança
+- **production/dependency-audit.md** — Detecção de typosquatting, scanning de CVE, ataques de supply chain, integridade de lockfile, conformidade de licenças
+- **checklists/critical-15.md** — 15 checks críticos com padrões regex e critérios de aprovação
+- **checklists/standard-25.md** — 25 checks padrão com referências cruzadas para arquivos de módulo
+- **checklists/production-10.md** — 10 checks de prontidão para produção
 
-### Sources
-- Synthesized from [LadyKerr/Vibe-Security-Skill](https://github.com/LadyKerr/Vibe-Security-Skill), [BehiSecc/VibeSec-Skill](https://github.com/BehiSecc/VibeSec-Skill), and [raroque/vibe-security-skill](https://github.com/raroque/vibe-security-skill)
-- Extended with new coverage: Cryptography, Race conditions, Docker/CI-CD, OAuth/PKCE, WebSocket auth, Logging security, Cookie prefixes, Prototype pollution
+### Fontes
+- Sintetizado a partir de [LadyKerr/Vibe-Security-Skill](https://github.com/LadyKerr/Vibe-Security-Skill), [BehiSecc/VibeSec-Skill](https://github.com/BehiSecc/VibeSec-Skill) e [raroque/vibe-security-skill](https://github.com/raroque/vibe-security-skill)
+- Ampliado com nova cobertura: Criptografia, Race conditions, Docker/CI-CD, OAuth/PKCE, Autenticação WebSocket, Segurança de logging, Prefixos de cookies, Prototype pollution

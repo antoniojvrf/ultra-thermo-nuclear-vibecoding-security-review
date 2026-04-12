@@ -1,31 +1,31 @@
-# Security Policy
+# Política de Segurança
 
-## Scope
+## Escopo
 
-This repository contains documentation and prompt instructions — not executable code. There is no traditional attack surface (no running server, no dependencies to exploit, no user data).
+Este repositório contém documentação e instruções de prompt — não código executável. Não há superfície de ataque tradicional (sem servidor rodando, sem dependências para explorar, sem dados de usuário).
 
-The main security concerns for this project are:
-- **Incorrect security advice**: A check or fix that is itself insecure or misleading
-- **False negatives**: Missing a vulnerability pattern that AI assistants commonly introduce
+As principais preocupações de segurança deste projeto são:
+- **Orientação de segurança incorreta**: Um check ou correção que é, em si, inseguro ou enganoso
+- **Falsos negativos**: Deixar passar um padrão de vulnerabilidade que assistentes de IA comumente introduzem
 
-## Reporting Incorrect Security Guidance
+## Reportando Orientação de Segurança Incorreta
 
-If you find that this skill gives incorrect, incomplete, or actively harmful security advice:
+Se você encontrar que esta skill fornece orientação de segurança incorreta, incompleta ou ativamente prejudicial:
 
-1. **Open a GitHub Issue** describing:
-   - The file and section containing the incorrect guidance
-   - What the correct guidance should be
-   - Why the current guidance is wrong or misleading
-   - (If applicable) A reference to authoritative documentation
+1. **Abra uma GitHub Issue** descrevendo:
+   - O arquivo e seção contendo a orientação incorreta
+   - Qual deveria ser a orientação correta
+   - Por que a orientação atual está errada ou é enganosa
+   - (Se aplicável) Uma referência à documentação oficial/autoritativa
 
-2. We'll review and update the affected file(s) promptly.
+2. Revisaremos e atualizaremos o(s) arquivo(s) afetado(s) prontamente.
 
-## Out of Scope
+## Fora de Escopo
 
-- Vulnerabilities in third-party tools or frameworks *mentioned* in this skill
-- Theoretical concerns about prompt injection into the skill itself
-- Feature requests (use Issues for those)
+- Vulnerabilidades em ferramentas ou frameworks de terceiros *mencionados* nesta skill
+- Preocupações teóricas sobre prompt injection na própria skill
+- Solicitações de funcionalidade (use Issues para essas)
 
-## Acknowledgements
+## Reconhecimentos
 
-Contributors who identify and report incorrect security guidance will be credited in the relevant commit messages and release notes.
+Contribuidores que identificarem e reportarem orientações de segurança incorretas serão creditados nas mensagens de commit e notas de release relevantes.

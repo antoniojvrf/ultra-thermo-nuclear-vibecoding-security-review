@@ -1,76 +1,82 @@
-# Contributing to VibeCoding Security Skill
+# Contribuindo com a VibeCoding Security Skill
 
-Thank you for helping make AI-assisted development more secure! 🛡️
+Obrigado por ajudar a tornar o desenvolvimento assistido por IA mais seguro! 🛡️
 
-## How to Contribute
+## Como Contribuir
 
-### 1. Adding a New Vulnerability Pattern
+### 1. Adicionando um Novo Padrão de Vulnerabilidade
 
-If you've found a vulnerability pattern that AI assistants commonly introduce and isn't covered, open a PR with:
+Se você encontrou um padrão de vulnerabilidade que assistentes de IA introduzem frequentemente e que não está coberto, abra um PR com:
 
-- **Which file to update**: Add to the relevant `vulnerabilities/*.md` or `stack/*.md` file
-- **Real-world example**: Show the vulnerable code pattern
-- **Exploit scenario**: Explain what an attacker could do (be concrete, not abstract)
-- **Fix**: Show the secure version as a before/after diff
-- **Add to checklist**: If it warrants a new check, add it to the appropriate `checklists/*.md` and `core/audit-process.md`
+- **Qual arquivo atualizar**: Adicione ao arquivo `vulnerabilities/*.md` ou `stack/*.md` relevante
+- **Exemplo real**: Mostre o padrão de código vulnerável
+- **Cenário de exploração**: Explique o que um atacante poderia fazer (seja concreto, não abstrato)
+- **Correção**: Mostre a versão segura como diff before/after  
+- **Adicionar ao checklist**: Se justificar um novo check, adicione ao `checklists/*.md` e `core/audit-process.md` apropriados
 
-### 2. Adding a New Stack Module
+### 2. Adicionando um Novo Módulo de Stack
 
-If there's a popular framework or service not yet covered (e.g., PlanetScale, Prisma-specific patterns, Clerk, etc.):
+Se há um framework ou serviço popular ainda não coberto (ex: PlanetScale, padrões específicos do Prisma, Clerk, etc.):
 
-1. Create `stack/<name>.md` following the existing structure
-2. Update `SKILL.md` to reference the new file in the References Index
-3. Add stack detection in the tech stack detection table in `SKILL.md`
-4. Add relevant checks to `core/audit-process.md`
+1. Crie `stack/<nome>.md` seguindo a estrutura existente
+2. Atualize `SKILL.md` para referenciar o novo arquivo no Índice de Referências
+3. Adicione a detecção de stack na tabela de detecção em `SKILL.md`
+4. Adicione os checks relevantes ao `core/audit-process.md`
 
-### 3. Improving an Existing Module
+### 3. Melhorando um Módulo Existente
 
-- Keep code examples minimal — show only what illustrates the vulnerability
-- Always show ❌ vulnerable pattern before ✅ secure pattern
-- Add language/framework labels to code fences (e.g., ` ```typescript `)
-- Keep bypass technique tables accurate and sourced from real-world exploits
+- Mantenha exemplos de código mínimos — mostre apenas o que ilustra a vulnerabilidade
+- Sempre mostre o padrão ❌ vulnerável antes do padrão ✅ seguro
+- Adicione labels de linguagem/framework nos code fences (ex: ` ```typescript `)
+- Mantenha tabelas de técnicas de bypass precisas e baseadas em exploits reais
 
-### 4. Fixing an Error
+### 4. Corrigindo um Erro
 
-Found outdated information, an incorrect fix, or a better secure pattern? Open a PR with what changed and why.
+Encontrou informação desatualizada, uma correção incorreta ou um padrão seguro melhor? Abra um PR explicando o que mudou e por quê.
 
 ---
 
-## File Structure Conventions
+## Idioma dos Arquivos
+
+> ⚠️ **Importante**: Os arquivos da skill (`SKILL.md`, `core/`, `vulnerabilities/`, `stack/`, `production/`, `checklists/`) são escritos em **inglês** intencionalmente, pois é o idioma em que os modelos de linguagem têm melhor performance. Somente os arquivos voltados à comunidade (README, CONTRIBUTING, SECURITY, CHANGELOG) são em português.
+
+---
+
+## Convenções de Estrutura
 
 ```
-vulnerabilities/     # Generic vulnerability classes (not framework-specific)
-stack/               # Framework/service-specific patterns
-production/          # Production readiness and compliance
-checklists/          # Executable checklists that reference the above
-core/                # Core orchestration (don't change without discussion)
+vulnerabilities/     # Classes genéricas de vulnerabilidade (não específicas de framework)
+stack/               # Padrões específicos de framework/serviço
+production/          # Prontidão para produção e conformidade
+checklists/          # Checklists executáveis que referenciam os acima
+core/                # Orquestração central (não altere sem discussão)
 ```
 
-## Pull Request Checklist
+## Checklist do Pull Request
 
-- [ ] Vulnerable example is actually exploitable (not theoretical)
-- [ ] Fix is actually secure (not just slightly less vulnerable)
-- [ ] Code examples have language labels
-- [ ] New checks are added to `core/audit-process.md` and the right `checklists/*.md`
-- [ ] No personally identifiable information in examples
-- [ ] Consistent formatting with existing files (headers, tables, checklist at end)
+- [ ] O exemplo vulnerável é efetivamente explorável (não teórico)
+- [ ] A correção é efetivamente segura (não apenas levemente menos vulnerável)
+- [ ] Exemplos de código possuem labels de linguagem
+- [ ] Novos checks adicionados ao `core/audit-process.md` e ao `checklists/*.md` correto
+- [ ] Nenhuma informação pessoal identificável nos exemplos
+- [ ] Formatação consistente com os arquivos existentes (headers, tabelas, checklist no final)
 
-## Code of Conduct
+## Código de Conduta
 
-- Be constructive and specific — "this pattern is vulnerable because X can do Y" not "this is wrong"
-- Credit sources when adding content from bug bounty writeups or research
-- Don't include actual exploit payloads that could harm real systems
+- Seja construtivo e específico — "este padrão é vulnerável porque X pode fazer Y", não "isso está errado"
+- Dê crédito às fontes ao adicionar conteúdo de writeups de bug bounty ou pesquisas
+- Não inclua payloads de exploit reais que possam prejudicar sistemas em produção
 
 ## Issues
 
-Use GitHub Issues to:
-- Report false positives (a check that flags safe code)
-- Report false negatives (a vulnerability pattern we're missing)
-- Suggest new stack modules
-- Discuss architectural changes to the skill
+Use GitHub Issues para:
+- Reportar falsos positivos (um check que sinaliza código seguro)
+- Reportar falsos negativos (um padrão de vulnerabilidade que estamos deixando passar)
+- Sugerir novos módulos de stack
+- Discutir mudanças arquiteturais na skill
 
-For security issues with the skill itself, open a regular issue — this is a documentation/prompt skill, not executable code.
+Para problemas de segurança na própria skill, abra uma issue normal — esta é uma skill de documentação/prompt, não código executável.
 
 ---
 
-Thank you for contributing! Every addition makes vibe-coded apps a little safer. 🚀
+Obrigado por contribuir! Cada adição torna apps vibe-coded um pouco mais seguros. 🚀
