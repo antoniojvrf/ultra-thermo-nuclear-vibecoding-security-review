@@ -1,4 +1,4 @@
-# 🛡️ VibeCoding Security Skill
+# 🛡️ Ultra Thermo Nuclear VibeCoding Security Review
 
 > Uma skill de segurança abrangente para assistentes de IA — combinando orientação preventiva e auditoria automatizada para projetos "vibe-coded".
 
@@ -70,7 +70,7 @@ Headers de segurança, source maps, endpoints debug, exclusão de conta (GDPR/LG
 ## Estrutura de Arquivos
 
 ```
-vibecoding-security/
+ultra-thermo-nuclear-vibecoding-security-review/
 ├── SKILL.md                         # Manifesto principal — detecção de stack + roteamento
 ├── core/
 │   ├── principles.md                # 7 pilares de segurança + anti-patterns de vibe coding
@@ -110,12 +110,12 @@ vibecoding-security/
 ## Instalação
 
 ### Antigravity (Gemini AI)
-A skill é lida automaticamente de `~/.gemini/antigravity/skills/vibecoding-security/`.
+A skill é lida automaticamente de `~/.gemini/antigravity/skills/ultra-thermo-nuclear-vibecoding-security-review/`.
 
 ```bash
 # Clone para o diretório de skills do Antigravity
-git clone https://github.com/antoniojvrf/vibecoding-security \
-  ~/.gemini/antigravity/skills/vibecoding-security
+git clone https://github.com/antoniojvrf/ultra-thermo-nuclear-vibecoding-security-review \
+  ~/.gemini/antigravity/skills/ultra-thermo-nuclear-vibecoding-security-review
 ```
 
 ### Outros Agentes (Claude, Cursor, Copilot)

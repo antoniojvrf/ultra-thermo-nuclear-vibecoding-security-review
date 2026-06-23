@@ -1,5 +1,5 @@
 ---
-name: vibecoding-security
+name: ultra-thermo-nuclear-vibecoding-security-review
 description: >
   Comprehensive security skill for AI-assisted ("vibe-coded") projects. Operates in two modes:
   (1) AUDIT — runs a 50-point security checklist with quantitative scoring against an existing codebase,
@@ -17,7 +17,7 @@ metadata:
   based-on: "LadyKerr/Vibe-Security-Skill, BehiSecc/VibeSec-Skill, raroque/vibe-security-skill"
 ---
 
-# VibeCoding Security — Agent Skill
+# Ultra Thermo Nuclear VibeCoding Security Review — Agent Skill
 
 ## Core Principle
 **Never trust the client.** Every price, user ID, role, subscription status, feature flag, and rate limit counter must be validated or enforced server-side. If it exists only in the browser, mobile bundle, or request body, an attacker controls it.
